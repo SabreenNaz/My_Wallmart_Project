@@ -1,0 +1,70 @@
+Walmart Sales Forecasting Project
+
+***A. Problem Statement***
+Walmart operates numerous retail outlets and faces challenges in managing inventory due to fluctuating demand. This project aims to address these challenges by analyzing historical weekly sales data and forecasting sales for the upcoming 12 weeks. By identifying trends, patterns, and factors influencing sales, Walmart can optimize inventory and enhance operational efficiency.
+
+***B. Project Objective***
+The primary objectives of this project are:
+
+1. To forecast weekly sales for selected Walmart stores for the next 12 weeks.
+2. To analyze key factors such as unemployment rates, CPI, temperature, and holidays, and their impact on sales.
+3. To identify seasonal sales trends and the best- and worst-performing stores.
+
+***C. Data Description***
+The dataset contains historical sales data with the following features:
+
+1. Store: Unique identifier for each store.
+2. Date: Weekly date.
+3. Weekly_Sales: Weekly revenue in dollars.
+4. Holiday_Flag: Indicates whether the week includes a holiday (1 for holiday, 0 otherwise).
+5. Temperature: Average weekly temperature in Fahrenheit.
+6. Fuel_Price: Weekly average fuel price in dollars.
+7. CPI: Consumer Price Index, indicating cost-of-living changes.
+8. Unemployment: Regional unemployment rate.
+
+***D. Data Preprocessing Steps and Inspiration***
+To prepare the data for modeling and analysis, the following steps were taken:
+
+1. Handling Missing Values: Checked for and addressed any missing entries in key columns.
+2. Duplicate Removal: Identified and removed duplicate records to ensure data integrity.
+3. Outlier Treatment: Managed extreme values to prevent their influence on model performance.
+4. Feature Engineering:
+   * Converted the Date column to datetime format and extracted additional features like Month and Year.
+5. Exploratory Data Analysis (EDA): Conducted detailed analysis to derive insights, including the impact of factors such as holidays, temperature, CPI, and unemployment on sales.
+
+***E. Choosing the Algorithm for the Project:***
+The Prophet model was selected as the forecasting algorithm due to its capability to handle time series data with strong seasonality and holiday effects.
+
+***F. Motivation and Reasons for Choosing the Algorithm:***
+The motivation behind choosing the Prophet model includes:
+
+1. Its ease of implementation
+2. Its effectiveness in dealing with missing data and irregular sampling.
+3. Its intuitive parameter tuning to reflect seasonality and trend changes accurately.
+
+***G. Assumptions:***
+
+1. Historical sales data, CPI, unemployment rates, and temperature have significant predictive power for future sales.
+2. External factors like promotions or unexpected events are not explicitly included in this model.
+
+***H. Inferences from the Same***
+
+1. CPI and Unemployment Impact:
+      Stores in regions with higher unemployment show lower sales.
+      CPI correlates positively with sales in economically affluent areas.
+2. Top-Performing Stores:
+      Store 20 consistently ranks as the top performer, attributed to location and demographics.
+3. Worst-Performing Stores:
+      Store 38 shows the lowest performance, with a significant gap in sales compared to top stores.
+
+***I. Future Possibilities of the Project***
+
+Enhance Forecasting: We can Incorporate additional features like promotional data and competitor pricing.
+Advanced Modeling: We can Explore hybrid models combining machine learning with time series algorithms for improved accuracy.
+Store-Specific Strategies: We can Develop tailored strategies for inventory, pricing, and marketing based on store-level forecasts.
+
+***J. Conclusion***
+The project demonstrates that accurate sales forecasting can significantly aid Walmart in optimizing inventory and making data-driven decisions. By leveraging the Prophet model, key insights were derived, including the effects of holidays, CPI, and unemployment on sales. These findings provide actionable intelligence for better inventory management and marketing strategies.
+
+***K. References***
+Prophet Model Documentation: "https://facebook.github.io/prophet/"
